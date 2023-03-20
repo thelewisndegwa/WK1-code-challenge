@@ -1,5 +1,3 @@
-// create functions for the deductions and gross salary
-//calculate gross/basic salary
 function netSalary (basic_salary, benefits){
     Payee = findPayee (basic_salary);
        console.log (Payee);
@@ -10,7 +8,8 @@ function netSalary (basic_salary, benefits){
  netSalary = basic_salary + benefits - (Payee + NHIF + NSSF);
     return netSalary;
 }
-// calculate payee
+
+
 function findPayee (basic_salary){
 let Payee = 0;
     if (basic_salary <= 288000){
@@ -24,8 +23,8 @@ let Payee = 0;
      }
      return Payee;
 }
-        //console.log (findPayee);
-// calculate the deductions starting with NHIF
+
+
 function findNHIF (basic_salary){
 let NHIF = 0;
     if (basic_salary >= 0 && basic_salary <= 5999){
@@ -81,8 +80,7 @@ let NHIF = 0;
      }
         return NHIF;
 }
-            //console.log (findNHIF);
-// calculate NSSF deductions
+            
 function findNSSF (basic_salary){
 let NSSF = 0;
     if (basic_salary <= 72000){
@@ -96,5 +94,5 @@ let NSSF = 0;
     }
         return NSSF;
 }
-                //console.log (findNSSF);
+               
 console.log (netSalary (300000, 150000));

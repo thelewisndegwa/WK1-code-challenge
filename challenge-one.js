@@ -1,21 +1,24 @@
+let marks = prompt("Enter student marks:");
+let Grades;
 
-
-function teststudentGradeSystem(score) {
-
-if (score > 79 && score <= 100) {
-   return grade = "A"
-} else if (score >= 60 && score <=79) {
-  return grade = "B"
-} else if (score >49 && score <=59) {
-  return grade = "C"
-} else if (score >=40 && score <=49) {
-  return grade = "D"
-
+if (marks < 0 || marks > 100) {
+  console.log("Invalid input!");
 } else {
-  return grade = "E"
+ 
+  if (marks >= 80) {
+    Grades = "A";
+  } else if (marks >= 60 && marks < 80) {
+    Grades = "B";
+  } else if (marks >= 50 && marks < 60) {
+    Grades = "C";
+  } else if (marks >= 40 && marks < 50) {
+    Grades = "D";
+  } else {
+    Grades = "E";
+  }
 }
-}
-console.log(teststudentGradeSystem(50));
+
+console.log(Grades);
 
 
 
